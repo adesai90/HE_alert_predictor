@@ -1,4 +1,4 @@
-#  Predicting AMEGO alerts using Fermi LAT Gamma-ray data:
+#  (Get a name):
 See Flowchat for plan of Action....
 
 Directories: 
