@@ -1,4 +1,4 @@
-#  (Get a name):
+#  Predicting AMEGO alerts using Fermi LAT Gamma-ray data:
 See Flowchat for plan of Action....
 
 Directories: 
@@ -24,7 +24,7 @@ Procedure:
     - alerts_flux_data_per_year_file_ gives additional information [times,fluxes,indices]
 
 3. For Running: fermi_data_main_flux_index_prediction.py to sue multiple seeds to give predictions that will then be saved.
-    -FOR TESTING ONLY!: Run the fermi_data_main_flux_index_prediction.ipynb to test one seed. Note that this will make plots and save everything. Run the python code to test multiple seeds which will only make text files with predictions.
+    -FOR TESTING ONLY!:Run the fermi_data_main_flux_index_prediction.ipynb to test one seed. Note that this will make plots and save everything. Run the python code to test multiple seeds which will only make text files with predictions.
 
 4. Run  extrapolate_to_amego_check_work.ipynb to read the individual csv files and check how many are actually giving results.
 
