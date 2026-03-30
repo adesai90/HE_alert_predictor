@@ -12,12 +12,12 @@ Directories:
     - fermi_data_main_flux_index_prediction: Main code to test prediction setup
     - extrapolate_to_amego_check_work.ipynb to check if AMEGO can detect it!
 - ???AMEGO_X_comparisions (Should contain Amego_x Sensitivity and relevant tools)
-- 
+- Using_XGBOOST: has similar folders to main showing how the results change when we use xgboost's gradient-boosted decision tree regression model with pytorch's 
 
 Models Tested:
 1. Using XGBoost: This uses XGBoost as a gradient-boosted decision tree regression model with `objective = "reg:squarederror"`, which means the model minimizes the mean squared error loss \( L = (y_{\text{true}} - y_{\text{pred}})^2 \) during training by sequentially adding decision trees that learn the residuals of previous trees; the final prediction is the sum of all tree outputs \( \hat{y} = \sum_{m=1}^{M} f_m(x) \). The evaluation metric `rmse` computes the root mean squared error \( \text{RMSE} = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(y_i - \hat{y}_i)^2} \), which measures prediction error in the original units of the target variable but does not affect optimization. The parameter `eta = 0.3` is the learning rate (shrinkage factor), meaning each new tree’s contribution is scaled as \( \hat{y} \leftarrow \hat{y} + \eta \cdot f_m(x) \), so a larger value like 0.3 allows faster learning but increases the risk of overfitting, while smaller values lead to slower, more stable convergence.
 ISSUE: this is best for short-horizon forecasting with strong engineered features and limited data, and has a hard time making predictions without continuing features
-2. Using Python
+2. Using pytorch 
 
 Procedure:
 1. Run fermi_data_initial_sample_selection to first make the sample selection which is then used for the study. 
